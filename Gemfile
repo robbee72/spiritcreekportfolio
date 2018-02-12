@@ -58,3 +58,5 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'devise', '~> 4.2'
 
 gem 'bootstrap', '~> 4.0'
+# Gem I built 
+gem 'walli_view_tool', git: 'https://github.com/robbee72/walli_view_tool'

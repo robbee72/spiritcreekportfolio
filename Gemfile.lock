@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/robbee72/walli_view_tool
+  revision: 2e93dee7014cf4fedc5fb1799d1f8fd9b9ffd0de
+  specs:
+    walli_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -208,6 +214,7 @@ DEPENDENCIES
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
+  walli_view_tool!
   web-console (>= 3.3.0)
 
 BUNDLED WITH
