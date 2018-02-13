@@ -29,7 +29,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #0d668c;
+  background-color: #333;
 }
 body {
   color: #fff;
@@ -162,22 +162,21 @@ body {
 }
 
 /*
- * Custom styles
+ * Custom Styles
  */
 
- .card-block {
-   color: #df3027;
-   text-align: left;
- }
+.card-block {
+  color: black;
+  text-align: left;
+}
 
- .auth-links a {
-   color: blue;
- }
+.auth-links a {
+  color: black;
+}
 
 .register-text {
   text-align: right;
 }
-
 
 .login > .card {
   width: 22rem;
