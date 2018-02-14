@@ -7,6 +7,15 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.by_position
   end
 
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+
+    # render nothing: true   changed for rails 5.1.4
+    render body: nil
+  end
+
   def react
     @react_portfolio_items = Portfolio.react
   end
@@ -14,9 +23,9 @@ class PortfoliosController < ApplicationController
   def new
    @portfolio_item = Portfolio.new
    3.times { @portfolio_item.technologies.build }
- end
+  end
 
- def create
+  def create
    @portfolio_item = Portfolio.new(portfolio_params)
 
    respond_to do |format|
@@ -26,7 +35,7 @@ class PortfoliosController < ApplicationController
        format.html { render :new }
      end
    end
- end
+  end
 
  def edit
  end
