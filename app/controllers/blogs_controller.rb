@@ -9,17 +9,21 @@ class BlogsController < ApplicationController
       @blogs = Blog.page(params[:page]).per(5)
     else
       @blogs = Blog.published.page(params[:page]).per(5)
-    end 
+    end
     @page_title = "My Portfolio Blog"
   end
 
 
   def show
-    @blog = Blog.includes(:comments).friendly.find(params[:id])
-    @comment = Comment.new
+    if logged_in(:site_admin) || @blog.published?
+      @blog = Blog.includes(:comments).friendly.find(params[:id])
+      @comment = Comment.new
 
-    @page_title = @blog.title
-    @seo_keywords = @blog.body
+      @page_title = @blog.title
+      @seo_keywords = @blog.body
+    else
+      redirect_to blogs_path, notice: "You are not authorized to access this page."
+    end
   end
 
   def new
