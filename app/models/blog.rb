@@ -9,6 +9,11 @@ class Blog < ApplicationRecord
 
   has_many :comments
 
+
+    scope :desc, -> {
+       order("blogs DESC") }
+
+
   def self.special_blogs
     all
   end
