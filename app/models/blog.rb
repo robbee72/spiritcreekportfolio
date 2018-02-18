@@ -3,16 +3,14 @@ class Blog < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :topic_id
 
   belongs_to :topic, optional: true
 
   has_many :comments
 
-
-    scope :desc, -> {
-       order("blogs DESC") }
-
+  scope :desc, -> {
+    order("blogs DESC") }
 
   def self.special_blogs
     all

@@ -1,4 +1,3 @@
-
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   layout "blog"
@@ -13,9 +12,8 @@ class BlogsController < ApplicationController
     @page_title = "My Portfolio Blog"
   end
 
-
   def show
-    if logged_in(:site_admin) || @blog.published?
+    if logged_in?(:site_admin) || @blog.published?
       @blog = Blog.includes(:comments).friendly.find(params[:id])
       @comment = Comment.new
 
@@ -69,18 +67,15 @@ class BlogsController < ApplicationController
     elsif @blog.published?
       @blog.draft!
     end
-
     redirect_to blogs_url, notice: 'Post status has been updated.'
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_blog
       @blog = Blog.friendly.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :body)
+      params.require(:blog).permit(:title, :body, :topic_id)
     end
 end
