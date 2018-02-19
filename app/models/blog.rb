@@ -7,7 +7,7 @@ class Blog < ApplicationRecord
 
   belongs_to :topic, optional: true
 
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   scope :desc, -> {
     order("blogs DESC") }
