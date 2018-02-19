@@ -1,8 +1,16 @@
-<div class="blog-masthead">
-  <div class="container">
-    <nav class="nav blog-nav">
-      <%= nav_helper 'nav-link', 'span' %>
-      <%= login_helper 'nav-link' %>
-    </nav>
-  </div>
-</div>
+  <nav class="navbar navbar-expand-md navbar-light" style="background-color: #d6b977;">
+      <%= link_to "Spirit Creek Capital", root_path, class: 'navbar-brand' %>
+
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <%= nav_helper 'nav-link', 'li' %>
+          <%= login_helper 'nav-link' %>
+        </ul>
+      </div>
+    </div>
+  </nav>
