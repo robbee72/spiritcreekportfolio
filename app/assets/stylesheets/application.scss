@@ -1,3 +1,4 @@
+
 @import "bootstrap";
 @import "gritter";
 
@@ -134,11 +135,11 @@ body {
 @media (min-width: 40em) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
+    position: float;
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+    position: float;
     bottom: 0;
   }
   /* Start the vertical centering */
@@ -219,4 +220,17 @@ body {
 
 .tech-news a {
   color: green;
+}
+
+.app-card-container {
+  color: black;
+  text-align: left;
+}
+
+.app-card-container > .card {
+  padding: 40px;
+}
+
+.app-card-container a {
+  color: blue;
 }
