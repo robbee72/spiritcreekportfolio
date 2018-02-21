@@ -23,3 +23,11 @@ Things you may want to cover:
 
 * ...
 # klr_skills
+
+Development
+terminal command to start:   rails server
+browser: localhost:3000
+
+
+Heroku deployment
+Deployed  spiritcreekportfolio

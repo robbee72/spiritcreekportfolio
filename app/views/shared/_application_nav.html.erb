@@ -5,13 +5,14 @@
       <%= nav_helper 'nav-link', 'span' %>
       <%= login_helper 'nav-link' %>
 
-      <p class="nav nav-masthead app-nav">
-        <% if user_signed_in? %>
-          <div>Signed in as... <%= current_user.email %></div>
-          <% end %>
-      </p>
+
     </nav>
 
   </div>
 
+</div>
+<div class="nav nav-masthead app-nav">
+  <% if user_signed_in? %>
+    <div>Signed in as... <%= current_user.email %></div>
+    <% end %>
 </div>
