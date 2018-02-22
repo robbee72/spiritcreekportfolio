@@ -35,7 +35,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise', '~> 4.2'
 
-gem 'bootstrap', '~> 4.0'
+gem 'bootstrap', '~> 4.0.0.aplha6'
+gem 'popper_js', '~> 1.12', '>= 1.12.9'
 gem 'walli_view_tool', git: 'https://github.com/robbee72/walli_view_tool'
 gem 'petergate', '~> 1.8.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3'
