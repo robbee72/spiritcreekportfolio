@@ -29,4 +29,11 @@ rails console
 
  > Topic.create!(title: "Ruby of Rails", percent_utilized: 65)
 
- ** Remember " create! " forces change 
+ ** Remember " create! " forces change
+
+
+ HEROKU deploying
+
+ after git push
+ git push heroku master
+ heroku run rake db:migrate
