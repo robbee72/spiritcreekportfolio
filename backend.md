@@ -39,7 +39,7 @@ rails console
  > heroku run rake db:migrate
 
 Create production user admin  basically the same commands
- heroku run rails c
+ > heroku run rails c
  > User.last
  > User.last.update!(roles: "site_admin")
 
