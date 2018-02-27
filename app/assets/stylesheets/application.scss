@@ -178,6 +178,8 @@ h6, .h6 {
 .card-block {
   color: black;
   text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .auth-links a {
@@ -251,11 +253,6 @@ h6, .h6 {
     linear-gradient(
       #c0d9d8, #7bbaed
     );
-}
-
-.card-block {
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 .card-border {
