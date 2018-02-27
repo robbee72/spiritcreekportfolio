@@ -31,6 +31,10 @@ module ApplicationHelper
         title: 'About Me'
       },
       {
+        url: resume_path,
+        title: 'Resume'
+      },
+      {
         url: contact_path,
         title: 'Contact'
       },
