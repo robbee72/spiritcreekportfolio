@@ -3,6 +3,7 @@ class BlogsChannel < ApplicationCable::Channel
     stream_from "blogs_#{params['blog_id']}_channel"
   end
 
+  
   def unsubscribed
   end
 
